@@ -1,0 +1,62 @@
+/* Style overrides
+   See https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/main/_colors.scss
+*/
+
+[data-md-color-scheme="ib1-light"] {
+  --md-primary-fg-color:               #5A7084;
+  --md-primary-fg-color--light:        #91A9BD;
+  --md-primary-fg-color--dark:         #1A3844;
+  --md-primary-bg-color:               #ffffff;
+  --md-primary-bg-color--light:        #ECF0F1;
+
+  /* Accent color shades */
+  --md-accent-fg-color:                #1A3844;
+  --md-accent-fg-color--transparent:   #1A384420;
+  --md-accent-bg-color:                #ffffff;
+  --md-accent-bg-color--light:         #ECF0F1;
+
+
+  --md-default-fg-color:               #5A7084;
+  --md-default-fg-color--light:        #1A3844;
+  --md-default-fg-color--lighter:      #1A3844;
+  --md-default-fg-color--lightest:     #0D1C22;
+  --md-default-bg-color:               #ffffff;
+  --md-default-bg-color--light:        #ECF0F1;
+  --md-default-bg-color--lighter:      #C8D4DE;
+  --md-default-bg-color--lightest:     #91A9BD;
+  
+  /* General text */
+  --md-typeset-color:                  #0D1C22;
+  --md-typeset-a-color:                #0A5A80;
+}
+
+[data-md-color-scheme="ib1-dark"] {
+  --md-primary-fg-color:               #5A7084;
+  --md-primary-fg-color--light:        #1A3844;
+  --md-primary-fg-color--dark:         #1A3844;
+  --md-primary-bg-color:               #0D1C22;
+  --md-primary-bg-color--light:        #ECF0F1;
+
+  /* Accent color shades */
+  --md-accent-fg-color:                #ECF0F1;
+  --md-accent-fg-color--transparent:   #ECF0F120;
+  --md-accent-bg-color:                #0D1C22;
+  --md-accent-bg-color--light:         #1A3844;
+
+  --md-default-fg-color:               #ffffff;
+  --md-default-fg-color--light:        #ECF0F1;
+  --md-default-fg-color--lighter:      #C8D4DE;
+  --md-default-fg-color--lightest:     #91A9BD;
+  --md-default-bg-color:               #0D1C22;
+  --md-default-bg-color--light:        #1A3844;
+  --md-default-bg-color--lighter:      #1A3844;
+  --md-default-bg-color--lightest:     #5A7084;
+
+  /* General text */
+  --md-typeset-color:                  #ffffff;
+  --md-typeset-a-color:                #C8D4DE;
+
+  /* Code snippets */
+  --md-code-fg-color:                  #ffffff;
+  --md-code-bg-color:                  #5A7084;
+}
