@@ -28,7 +28,7 @@
   /* General text */
   --md-typeset-color:                  #0D1C22;
   --md-typeset-a-color:                #1F97F3;
-  --md-typeset-a-color-transparent:    #1F97F3;
+  --md-typeset-a-color-transparent:    #1F97F380;
   --md-typeset-a-hover-underline:      #1A3844;
 }
 
@@ -57,7 +57,7 @@
   /* General text */
   --md-typeset-color:                  #C8D4DE;
   --md-typeset-a-color:                #FFFFFF;
-  --md-typeset-a-color-transparent:    #FFFFFF20;
+  --md-typeset-a-color-transparent:    #FFFFFF80;
   --md-typeset-a-hover-underline:      #FFEC00;
 
   /* Menus */
