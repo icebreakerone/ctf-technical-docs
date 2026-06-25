@@ -57,6 +57,7 @@
   --md-typeset-color:                  #C8D4DE;
   --md-typeset-a-color:                #FFFFFF;
   --md-typeset-a-color-transparent:    #FFFFFF20;
+  --md-typeset-a-hover-underline:      #FFEC00;
 
   /* Code snippets */
   --md-code-fg-color:                  #ffffff;
@@ -70,6 +71,6 @@
 }
 
 .md-typeset a:hover {
-  border-bottom-color: var(--md-accent-fg-color,#ECF0F1); 
+  border-bottom-color: var(--md-typeset-a-hover-underline,#FFFFFF); 
 }
 
