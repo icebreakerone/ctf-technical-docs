@@ -60,3 +60,14 @@
   --md-code-fg-color:                  #ffffff;
   --md-code-bg-color:                  #5A7084;
 }
+
+.md-typeset a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: border-color 0.15s;
+    :hover {
+      border-bottom-color: FFEC00;
+    }
+}
+
