@@ -59,6 +59,9 @@
   --md-typeset-a-color-transparent:    #FFFFFF20;
   --md-typeset-a-hover-underline:      #FFEC00;
 
+  /* Menus */
+  --md-nav-link-active:                #FFEC00;
+
   /* Code snippets */
   --md-code-fg-color:                  #ffffff;
   --md-code-bg-color:                  #5A7084;
@@ -74,3 +77,6 @@
   border-bottom-color: var(--md-typeset-a-hover-underline,#FFFFFF); 
 }
 
+.md-nav__link--active {
+  color: var(--md-nav-link-active, #FFFFFF);
+}
