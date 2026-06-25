@@ -27,7 +27,7 @@
   
   /* General text */
   --md-typeset-color:                  #0D1C22;
-  --md-typeset-a-color:                #0A5A80;
+  --md-typeset-a-color:                #1F97F3;
 }
 
 [data-md-color-scheme="ib1-dark"] {
@@ -54,7 +54,7 @@
 
   /* General text */
   --md-typeset-color:                  #ffffff;
-  --md-typeset-a-color:                #C8D4DE;
+  --md-typeset-a-color:                #FFEC00;
 
   /* Code snippets */
   --md-code-fg-color:                  #ffffff;
