@@ -76,7 +76,3 @@
 .md-typeset a:hover {
   border-bottom-color: var(--md-typeset-a-hover-underline,#FFFFFF); 
 }
-
-.md-nav__link--active {
-  color: var(--md-nav-link-active, #FFFFFF);
-}
