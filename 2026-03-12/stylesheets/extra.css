@@ -77,10 +77,10 @@
   border-bottom-color: var(--md-typeset-a-hover-underline,#FFFFFF); 
 }
 
-a.md-nav__link {
+.md-nav__link {
   color: var(--md-typeset-color, #FFFFFF);
 }
 
-a.md-nav__link--active {
+.md-nav__link .md-nav__link--active {
   color: var(--md-nav-link, #FFFFFF);
 }
