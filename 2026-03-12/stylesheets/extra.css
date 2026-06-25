@@ -54,7 +54,7 @@
 
   /* General text */
   --md-typeset-color:                  #C8D4DE;
-  --md-typeset-a-color:                #FFEC00;
+  --md-typeset-a-color:                #FFFFFF;
 
   /* Code snippets */
   --md-code-fg-color:                  #ffffff;
@@ -62,13 +62,13 @@
 }
 
 .md-typeset a {
-    color: #fff;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    transition: border-color 0.15s;
+  color: var(--md-typeset-a-color,white);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  transition: border-color 0.15s;
 }
 
 .md-typeset a:hover {
-      border-bottom-color: FFEC00;
+  border-bottom-color: FFEC00; 
 }
 
