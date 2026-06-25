@@ -28,6 +28,7 @@
   /* General text */
   --md-typeset-color:                  #0D1C22;
   --md-typeset-a-color:                #1F97F3;
+  --md-typeset-a-color-transparent:    #1F97F320;
 }
 
 [data-md-color-scheme="ib1-dark"] {
@@ -55,6 +56,7 @@
   /* General text */
   --md-typeset-color:                  #C8D4DE;
   --md-typeset-a-color:                #FFFFFF;
+  --md-typeset-a-color-transparent:    #FFFFFF20;
 
   /* Code snippets */
   --md-code-fg-color:                  #ffffff;
@@ -63,12 +65,11 @@
 
 .md-typeset a {
   text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid var(--md-typeset-a-color-transparent, #FFFFFF20);
   transition: border-color 0.15s;
 }
 
 .md-typeset a:hover {
-  border-bottom-color: FFEC00; 
-  color: red;
+  border-bottom-color: var(--md-accent-fg-color,#ECF0F1); 
 }
 
