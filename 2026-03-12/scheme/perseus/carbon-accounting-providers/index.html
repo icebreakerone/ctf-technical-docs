@@ -1336,8 +1336,8 @@ https://github.com/icebreakerone/perseus-demo-cap</p>
 <p>You may choose the application name, but ensure it is clear and recognisable to external audiences, as it will appear publicly in the Directory and on issued certificates.</p>
 <p><img alt="Member Portal - Create Application" src="../../../img/perseus-directory-create-app.png" /></p>
 <p>Create a <strong>Client certificate</strong> and a <strong>Signing certificate</strong>. For each, follow the instructions in the Directory to create a CSR with openssl and upload it for signing to the Directory.</p>
-<p><a href="../../../img/perseus-directory-cert-1.png">Member Portal - Create certificate step 1</a>
-<a href="../../../img/perseus-directory-cert-2.png">Member Portal - Create certificate step 2</a></p>
+<p><img alt="Member Portal - Create certificate step 1" src="../../../img/perseus-directory-cert-1.png" />
+<img alt="Member Portal - Create certificate step 2" src="../../../img/perseus-directory-cert-2.png" /></p>
 <p>Use a separate private key for each certificate, and store them securely.</p>
 <p>Detailed documentation of Perseus certificates may be found in the<a href="https://specification.docs.ib1.org/member-identity-digital-certificates/1.0/">Member Identity Digital Certificates</a> specification.</p>
 <h2 id="identifiers">Identifiers</h2>
@@ -1445,9 +1445,9 @@ Note endpointURL and oauthIssuer URLs</p>
 <h2 id="retrieve-consumption-data-and-grid-intensity">Retrieve consumption data and grid intensity</h2>
 <h3 id="edp-identity-confirmation">EDP identity confirmation</h3>
 <p>This UI is presented by the EDP as part of the OAuth flow</p>
-<p><img alt="EDP identity confirmation" src="(../../img/perseus-flow-any-permissions-4.png)" /></p>
+<p><img alt="EDP identity confirmation" src="../../../img/perseus-flow-any-permissions-4.png" /></p>
 <h3 id="consumption-data-fetch">Consumption data fetch</h3>
-<p><img alt="Consumption data fetch UI" src="(../../img/perseus-flow-any-permissions-5.png)" /></p>
+<p><img alt="Consumption data fetch UI" src="../../../img/perseus-flow-any-permissions-5.png" /></p>
 <p>Implement API clients to fetch the raw data:
 * Consumption data API](https://registry.core.trust.ib1.org/scheme/perseus/standard/energy-consumption-data/2026-03-12), using the OAuth token. The response includes the meter’s postcode outcode (first half of the postcode).
 * Use NESO’s <a href="https://carbon-intensity.github.io/api-definitions/#get-regional-intensity-from-to-postcode-postcode">grid intensity API</a> to retrieve emissions data using the postcode outcode.</p>
@@ -1497,7 +1497,7 @@ https://registry.core.trust.ib1.org/scheme/perseus/process/gas-emissions-calcula
 <p>There is a <a href="https://ib1.org/wp-content/uploads/2026/02/report_-Perseus-Gas-methodology-and-technical-specification-2025-10-15-shared.pdf">discussion paper</a> covering the gas methodology in the <a href="https://ib1.org/perseus/2025-report/">Perseus 2025 Report accompanying documents</a>.</p>
 <h2 id="generate-report">Generate report</h2>
 <p>The initial report must contain data for the last 12 completed calendar months, if available.</p>
-<p><img alt="Report download UI" src="(../../img/perseus-flow-any-permissions-6.png)" /></p>
+<p><img alt="Report download UI" src="../../../img/perseus-flow-any-permissions-6.png" /></p>
 <p>Reports must be generated specifically for the FSP chosen by the user (either via the original link from the FSP, or via their second permission. If the user wishes to share with additional FSPs, permission must be obtained in each case.</p>
 <p>The report may be presented as an HTML page or a signed PDF for the user to download. Either is acceptable to demonstrate Perseus-readiness.</p>
 <p>Both reports should display the information provided in the <a href="https://docs.google.com/document/d/1otCH2sy6WI_m3LALjAmHQBr5vmFRQ1Mr7Ug6Z5dO6cM/edit?tab=t.0">Example Perseus Report</a>, summarised as:
@@ -1548,8 +1548,7 @@ https://registry.core.trust.ib1.org/scheme/perseus/process/gas-emissions-calcula
 * "Neither" - sorry, Perseus isn't available for you yet</p>
 <p>At the time of writing there isn’t a way to differentiate the two types of EDP in Perseus. We're proposing new role attributes to enable this, and will work this through early 2026. In the meantime the suggestion is to display a choice of all EDPs, since there are no business arrangements in the sandbox.</p>
 <h2 id="implement-transaction-logging">Implement transaction logging</h2>
-<p>Log all interactions with peers to meet auditing requirements.</p>
-<p><strong>At the time of sandbox launch, production policies for data retention have not been finalised by AG5</strong></p>
+<p>Log all interactions with peers to meet auditing requirements. Data must be retained according to the Perseus <a href="https://registry.core.trust.ib1.org/scheme/perseus/policy/data-retention/2026-03-12">Data Retention Policy</a>.</p>
 <h2 id="implement-server-allowlist">Implement server allowlist</h2>
 <p>To ensure that connections are made only to servers operated by Members of the Trust Framework, the Directory maintains an authoritative allowlist of DNS names. This allowlist is published at a stable, Directory-hosted URL, and must be checked before connecting to an API server.</p>
 <p>https://specification.trust.ib1.org/public-ca-issued-server-tls-certificates-with-directory-allowlist/1.0/#allowlist </p>
