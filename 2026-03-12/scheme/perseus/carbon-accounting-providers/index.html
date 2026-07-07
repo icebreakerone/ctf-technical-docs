@@ -1445,9 +1445,9 @@ Note endpointURL and oauthIssuer URLs</p>
 <h2 id="retrieve-consumption-data-and-grid-intensity">Retrieve consumption data and grid intensity</h2>
 <h3 id="edp-identity-confirmation">EDP identity confirmation</h3>
 <p>This UI is presented by the EDP as part of the OAuth flow</p>
-<p><a href="(../../img/perseus-flow-any-permissions-4.png)">EDP identity confirmation</a></p>
+<p><img alt="EDP identity confirmation" src="(../../img/perseus-flow-any-permissions-4.png)" /></p>
 <h3 id="consumption-data-fetch">Consumption data fetch</h3>
-<p><a href="(../../img/perseus-flow-any-permissions-5.png)">Consumption data fetch UI</a></p>
+<p><img alt="Consumption data fetch UI" src="(../../img/perseus-flow-any-permissions-5.png)" /></p>
 <p>Implement API clients to fetch the raw data:
 * Consumption data API](https://registry.core.trust.ib1.org/scheme/perseus/standard/energy-consumption-data/2026-03-12), using the OAuth token. The response includes the meter’s postcode outcode (first half of the postcode).
 * Use NESO’s <a href="https://carbon-intensity.github.io/api-definitions/#get-regional-intensity-from-to-postcode-postcode">grid intensity API</a> to retrieve emissions data using the postcode outcode.</p>
@@ -1497,7 +1497,7 @@ https://registry.core.trust.ib1.org/scheme/perseus/process/gas-emissions-calcula
 <p>There is a <a href="https://ib1.org/wp-content/uploads/2026/02/report_-Perseus-Gas-methodology-and-technical-specification-2025-10-15-shared.pdf">discussion paper</a> covering the gas methodology in the <a href="https://ib1.org/perseus/2025-report/">Perseus 2025 Report accompanying documents</a>.</p>
 <h2 id="generate-report">Generate report</h2>
 <p>The initial report must contain data for the last 12 completed calendar months, if available.</p>
-<p><a href="(../../img/perseus-flow-any-permissions-6.png)">Report download UI</a></p>
+<p><img alt="Report download UI" src="(../../img/perseus-flow-any-permissions-6.png)" /></p>
 <p>Reports must be generated specifically for the FSP chosen by the user (either via the original link from the FSP, or via their second permission. If the user wishes to share with additional FSPs, permission must be obtained in each case.</p>
 <p>The report may be presented as an HTML page or a signed PDF for the user to download. Either is acceptable to demonstrate Perseus-readiness.</p>
 <p>Both reports should display the information provided in the <a href="https://docs.google.com/document/d/1otCH2sy6WI_m3LALjAmHQBr5vmFRQ1Mr7Ug6Z5dO6cM/edit?tab=t.0">Example Perseus Report</a>, summarised as:
