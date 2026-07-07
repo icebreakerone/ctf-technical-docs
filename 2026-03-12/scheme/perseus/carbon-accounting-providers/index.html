@@ -1322,7 +1322,7 @@
 
 <h1 id="carbon-accounting-platforms">Carbon Accounting Platforms</h1>
 <h2 id="architecture-overview">Architecture overview</h2>
-<p><img alt="Perseus Architecture" src="../../perseus-technical-architecture-v2025-09-16.png" /></p>
+<p><img alt="Perseus Architecture" src="/img/perseus-technical-architecture-v2025-09-16.png" /></p>
 <h2 id="demo-web-applications">Demo web applications</h2>
 <p>Icebreaker One has published demonstration energy data provider (EDP) and carbon accounting provider (CAP) implementations in Python. Our intention is for the code and README there to be self-describing. Please use the GitHub Issues feature on the repository if you have any questions or encounter problems.</p>
 <p>https://github.com/icebreakerone/perseus-demo-energy
@@ -1334,7 +1334,7 @@ https://github.com/icebreakerone/perseus-demo-cap</p>
 <p>Once configured, log into the member portal at https://member.core.sandbox.trust.ib1.org and navigate to the Perseus scheme.</p>
 <p>If you have not already done so, create a new Application within the Perseus scheme.</p>
 <p>You may choose the application name, but ensure it is clear and recognisable to external audiences, as it will appear publicly in the Directory and on issued certificates.</p>
-<p><img alt="Member Portal - Create Application" src="perseus-directory-create-app.png" /></p>
+<p><img alt="Member Portal - Create Application" src="/img/perseus-directory-create-app.png" /></p>
 <p>Create a <strong>Client certificate</strong> and a <strong>Signing certificate</strong>. For each, follow the instructions in the Directory to create a CSR with openssl and upload it for signing to the Directory.</p>
 <p><a href="perseus-directory-cert-1.png">Member Portal - Create certificate step 1</a>
 <a href="perseus-directory-cert-2.png">Member Portal - Create certificate step 2</a></p>
@@ -1358,15 +1358,15 @@ Production
 <h3 id="1-fsp-initiated-with-one-permission">1. FSP-initiated with one permission</h3>
 <p>User start link</p>
 <h4 id="landing-page-public">Landing page (public)</h4>
-<p><img alt="Single Permission Flow - User Start Link" src="perseus-flow-single-permission-1.png" /></p>
+<p><img alt="Single Permission Flow - User Start Link" src="/img/perseus-flow-single-permission-1.png" /></p>
 <p>Develop a publicly accessible page that provides users with a concise overview of the service and clear procedural instructions. This page must not require authentication and should focus on informing the user about the process and intended outcomes prior to the collection or processing of any data.</p>
 <p>Include buttons to create a new account, or log in if the user already has an account. It is expected that most users will need to create a new account.</p>
 <p>The landing page may accept an optional query parameter containing the Financial Service Provider’s (FSP) Directory Member URL, the format of which is specific to your application. This parameter may be used to pre-select the FSP during all subsequent interactions. It should be stored in your database so it can be used in future user sessions.</p>
 <h4 id="intro-page-logged-in-user">Intro page (logged-in user)</h4>
 <p>You may wish to create a Perseus-specific page after login to introduce the permissioning process:</p>
-<p><img alt="Single Permission Flow - Permission Intro" src="perseus-flow-single-permission-2.png" /></p>
+<p><img alt="Single Permission Flow - Permission Intro" src="/img/perseus-flow-single-permission-2.png" /></p>
 <h4 id="permission-screen">Permission screen</h4>
-<p><img alt="Single Permission Flow - Permission screen" src="perseus-flow-single-permission-3.png" /></p>
+<p><img alt="Single Permission Flow - Permission screen" src="/img/perseus-flow-single-permission-3.png" /></p>
 <p>One permission screen is required that includes permission to fetch and process the SME’s energy consumption data from an EDP, and permission to release the data to the named Financial Service Provider (FSP).</p>
 <p>The display of permission text is governed by a Perseus Policy, available in the registry.
 https://registry.core.trust.ib1.org/scheme/perseus/policy/data-license-terms/2026-03-12</p>
@@ -1378,10 +1378,10 @@ https://registry.core.trust.ib1.org/scheme/perseus/license/energy-consumption-em
 <h3 id="2-cap-initiated-with-two-permissions">2. CAP-initiated with two permissions</h3>
 <p>This permission allows the CAP to connect to an EDP to retrieve consumption information in advance of knowing which FSP(s) the emissions data reports will be generated for.</p>
 <h4 id="user-start-screen">User start screen</h4>
-<p><img alt="Separate Permission Flow - Permission Intro" src="perseus-flow-separate-permissions-1.png" /></p>
+<p><img alt="Separate Permission Flow - Permission Intro" src="/img/perseus-flow-separate-permissions-1.png" /></p>
 <p>Develop a screen describing the service the SME will receive from you if they connect their consumption data. The UX of this screen is for you to design.</p>
 <h4 id="edp-permission-ui">EDP Permission UI</h4>
-<p><img alt="Separate Permission Flow - EDP Permission UI" src="perseus-flow-separate-permissions-2.png" /></p>
+<p><img alt="Separate Permission Flow - EDP Permission UI" src="/img/perseus-flow-separate-permissions-2.png" /></p>
 <p>This permission includes permission to fetch and process the SME’s energy consumption data from an EDP and to use it to provide advice to the SME.</p>
 <p>The display of permission text is governed by a Perseus Policy, available in the registry.
 https://registry.core.trust.ib1.org/scheme/perseus/policy/data-license-terms/2026-03-12 </p>
@@ -1391,10 +1391,10 @@ https://registry.core.trust.ib1.org/scheme/perseus/license/energy-consumption-ed
 <p>Any other UX for the screen is for you to design.</p>
 <p>The subsequent steps to retrieve the data are below this permissions section.</p>
 <h4 id="fsp-offer-ui">FSP Offer UI</h4>
-<p><img alt="Separate Permission Flow - FSP Offer UI" src="perseus-flow-separate-permissions-3.png" /></p>
+<p><img alt="Separate Permission Flow - FSP Offer UI" src="/img/perseus-flow-separate-permissions-3.png" /></p>
 <p>Design a screen allowing a user to select an FSP to create an emissions report for. This screen must only be available if the user already has the earlier permission to retrieve energy data from an EDP.</p>
 <h4 id="fsp-permission-ui">FSP Permission UI</h4>
-<p><img alt="Separate Permission Flow - FSP Permission UI" src="perseus-flow-separate-permissions-4.png" /></p>
+<p><img alt="Separate Permission Flow - FSP Permission UI" src="/img/perseus-flow-separate-permissions-4.png" /></p>
 <p>This permission enables the CAP to provide the SME’s calculated emissions data, based on the consumption data from the EDP, to the named FSP.</p>
 <p>The display of permission text is governed by a Perseus Policy, available in the registry.
 https://registry.core.trust.ib1.org/scheme/perseus/policy/data-license-terms/2026-03-12</p>
@@ -1445,9 +1445,9 @@ Note endpointURL and oauthIssuer URLs</p>
 <h2 id="retrieve-consumption-data-and-grid-intensity">Retrieve consumption data and grid intensity</h2>
 <h3 id="edp-identity-confirmation">EDP identity confirmation</h3>
 <p>This UI is presented by the EDP as part of the OAuth flow</p>
-<p><a href="(perseus-flow-any-permissions-4.png)">EDP identity confirmation</a></p>
+<p><a href="(/img/perseus-flow-any-permissions-4.png)">EDP identity confirmation</a></p>
 <h3 id="consumption-data-fetch">Consumption data fetch</h3>
-<p><a href="(perseus-flow-any-permissions-5.png)">Consumption data fetch UI</a></p>
+<p><a href="(/img/perseus-flow-any-permissions-5.png)">Consumption data fetch UI</a></p>
 <p>Implement API clients to fetch the raw data:
 * Consumption data API](https://registry.core.trust.ib1.org/scheme/perseus/standard/energy-consumption-data/2026-03-12), using the OAuth token. The response includes the meter’s postcode outcode (first half of the postcode).
 * Use NESO’s <a href="https://carbon-intensity.github.io/api-definitions/#get-regional-intensity-from-to-postcode-postcode">grid intensity API</a> to retrieve emissions data using the postcode outcode.</p>
@@ -1497,7 +1497,7 @@ https://registry.core.trust.ib1.org/scheme/perseus/process/gas-emissions-calcula
 <p>There is a <a href="https://ib1.org/wp-content/uploads/2026/02/report_-Perseus-Gas-methodology-and-technical-specification-2025-10-15-shared.pdf">discussion paper</a> covering the gas methodology in the <a href="https://ib1.org/perseus/2025-report/">Perseus 2025 Report accompanying documents</a>.</p>
 <h2 id="generate-report">Generate report</h2>
 <p>The initial report must contain data for the last 12 completed calendar months, if available.</p>
-<p><a href="(perseus-flow-any-permissions-5.png)">Report download UI</a></p>
+<p><a href="(/img/perseus-flow-any-permissions-5.png)">Report download UI</a></p>
 <p>Reports must be generated specifically for the FSP chosen by the user (either via the original link from the FSP, or via their second permission. If the user wishes to share with additional FSPs, permission must be obtained in each case.</p>
 <p>The report may be presented as an HTML page or a signed PDF for the user to download. Either is acceptable to demonstrate Perseus-readiness.</p>
 <p>Both reports should display the information provided in the <a href="https://docs.google.com/document/d/1otCH2sy6WI_m3LALjAmHQBr5vmFRQ1Mr7Ug6Z5dO6cM/edit?tab=t.0">Example Perseus Report</a>, summarised as:
