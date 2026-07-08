@@ -2,26 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.core.trust.ib1.org/2026-03-12/</loc>
-         <lastmod>2026-07-07</lastmod>
+         <lastmod>2026-07-08</lastmod>
     </url>
     <url>
          <loc>https://docs.core.trust.ib1.org/2026-03-12/changelog/</loc>
-         <lastmod>2026-07-07</lastmod>
+         <lastmod>2026-07-08</lastmod>
     </url>
     <url>
          <loc>https://docs.core.trust.ib1.org/2026-03-12/scheme/perseus/</loc>
-         <lastmod>2026-07-07</lastmod>
+         <lastmod>2026-07-08</lastmod>
     </url>
     <url>
          <loc>https://docs.core.trust.ib1.org/2026-03-12/scheme/perseus/carbon-accounting-providers/</loc>
-         <lastmod>2026-07-07</lastmod>
+         <lastmod>2026-07-08</lastmod>
     </url>
     <url>
          <loc>https://docs.core.trust.ib1.org/2026-03-12/scheme/perseus/energy-data-providers/</loc>
-         <lastmod>2026-07-07</lastmod>
+         <lastmod>2026-07-08</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.core.trust.ib1.org/2026-03-12/scheme/perseus/financial-service-providers/</loc>
+         <lastmod>2026-07-08</lastmod>
     </url>
     <url>
          <loc>https://docs.core.trust.ib1.org/2026-03-12/scheme/perseus/legal-and-operational/</loc>
-         <lastmod>2026-07-07</lastmod>
+         <lastmod>2026-07-08</lastmod>
     </url>
 </urlset>
