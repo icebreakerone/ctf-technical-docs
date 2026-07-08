@@ -1353,13 +1353,13 @@
 <p><img alt="Perseus Architecture" src="../../../img/perseus-technical-architecture-v2025-09-16.png" /></p>
 <h2 id="demo-web-applications">Demo web applications</h2>
 <p>Icebreaker One has published demonstration energy data provider (EDP) and carbon accounting provider (CAP) implementations in Python. Our intention is for the code and README there to be self-describing. Please use the GitHub Issues feature on the repository if you have any questions or encounter problems.</p>
-<p>https://github.com/icebreakerone/perseus-demo-energy
-https://github.com/icebreakerone/perseus-demo-cap</p>
+<p><a href="https://github.com/icebreakerone/perseus-demo-energy">https://github.com/icebreakerone/perseus-demo-energy</a>
+<a href="https://github.com/icebreakerone/perseus-demo-cap">https://github.com/icebreakerone/perseus-demo-cap</a></p>
 <h2 id="generate-certificates">Generate certificates</h2>
-<p>When your organization completes the Core Trust Framework agreement (see <a href="../legal-and-operational/">Legal</a>) IB1 will create an organization record in the Sandbox and Production member portals, and invite your adminstrative contacts to create user accounts on them.</p>
-<p>IB1 or your own organisation administrator will send an invitation to create an account on the <strong>Sandbox</strong> member portal at https://member.core.sandbox.trust.ib1.org</p>
+<p>When your organization completes the Core Trust Framework agreement (see <a href="../legal-and-operational/">Legal</a>) IB1 will create an organization record in the Sandbox and Production member portals, and invite your administrative contacts to create user accounts on them.</p>
+<p>IB1 or your own organisation administrator will send an invitation to create an account on the <strong>Sandbox</strong> member portal at <a href="https://member.core.sandbox.trust.ib1.org">https://member.core.sandbox.trust.ib1.org</a></p>
 <p>You will need to set a password and provide a 2nd method of authentication via text message or authenticator application.</p>
-<p>Once configured, log into the member portal at https://member.core.sandbox.trust.ib1.org and navigate to the Perseus scheme.</p>
+<p>Once configured, log into the member portal and navigate to the Perseus scheme.</p>
 <p>If you have not already done so, create a new Application within the Perseus scheme.</p>
 <p>You may choose the application name, but ensure it is clear and recognisable to external audiences, as it will appear publicly in the Directory and on issued certificates.</p>
 <p><img alt="Member Portal - Create Application" src="../../../img/perseus-directory-create-app.png" /></p>
@@ -1371,15 +1371,15 @@ https://github.com/icebreakerone/perseus-demo-cap</p>
 <h2 id="identifiers">Identifiers</h2>
 <p>The Trust Framework uses Registry URLs as identifiers to discover APIs and other Members in the Directory. These URLs will vary between environments, both the hostname in the URL and any version number in the URL path.</p>
 <p>Sandbox
-* Registry hostname: https://registry.core.sandbox.trust.ib1.org
-* Directory hostname: https://directory.core.sandbox.trust.ib1.org
+* Registry hostname: <code>https://registry.core.sandbox.trust.ib1.org</code>
+* Directory hostname: <code>https://directory.core.sandbox.trust.ib1.org</code>
 Production
-* Registry hostname: https://registry.core.trust.ib1.org
-* Directory hostname: https://directory.core.trust.ib1.org</p>
+* Registry hostname: <code>https://registry.core.trust.ib1.org</code>
+* Directory hostname: <code>https://directory.core.trust.ib1.org</code></p>
 <p>You should write your application with a configuration that allows the entire URL to be varied between environments.</p>
 <h2 id="permission-flow">Permission flow</h2>
 <p>Sequence diagrams for the user permission flows and technical details of the FAPI2 OAuth2 flow are available at </p>
-<p>https://github.com/icebreakerone/perseus-sequence-diagrams</p>
+<p><a href="https://github.com/icebreakerone/perseus-sequence-diagrams">https://github.com/icebreakerone/perseus-sequence-diagrams</a></p>
 <p>You must implement at least one of the following permission flows:
 * FSP-initiated with one permission
 * CAP-initiated with separate permissions</p>
@@ -1397,10 +1397,10 @@ Production
 <p><img alt="Single Permission Flow - Permission screen" src="../../../img/perseus-flow-single-permission-3.png" /></p>
 <p>One permission screen is required that includes permission to fetch and process the SME’s energy consumption data from an EDP, and permission to release the data to the named Financial Service Provider (FSP).</p>
 <p>The display of permission text is governed by a Perseus Policy, available in the registry.
-https://registry.core.trust.ib1.org/scheme/perseus/policy/data-license-terms/2026-03-12</p>
+<a href="https://registry.core.trust.ib1.org/scheme/perseus/policy/data-license-terms/2026-03-12">https://registry.core.trust.ib1.org/scheme/perseus/policy/data-license-terms/2026-03-12</a></p>
 <p>The permission screen must be displayed before connecting with the Energy Data Provider (EDP). The user must be presented with the Perseus permission text and offered a clear way to agree to it (for example a checkbox). The permission text forms part of the definition of the licence to process the consumption data defined in the Perseus Registry:
-https://registry.core.trust.ib1.org/scheme/perseus/license/energy-consumption-emissions-edp-cap-fsp/2026-03-12 (see permissionText field) </p>
-<p>The permission text contains placeholders for the names of the EDP, CAP (you) and FSP. These should be replaced with either the brand.name field (if specified) or the legalName field (always provided) from the Directory information at each organization's ID e.g. https://directory.core.sandbox.trust.ib1.org/m/7a1qv915 is the sandbox EDP name</p>
+<a href="https://registry.core.trust.ib1.org/scheme/perseus/license/energy-consumption-emissions-edp-cap-fsp/2026-03-12">https://registry.core.trust.ib1.org/scheme/perseus/license/energy-consumption-emissions-edp-cap-fsp/2026-03-12</a> (see permissionText field) </p>
+<p>The permission text contains placeholders for the names of the EDP, CAP (you) and FSP. These should be replaced with either the brand.name field (if specified) or the legalName field (always provided) from the Directory information at each organization's ID e.g. <a href="https://directory.core.sandbox.trust.ib1.org/m/7a1qv915">https://directory.core.sandbox.trust.ib1.org/m/7a1qv915</a> is the sandbox EDP name</p>
 <p>Any other UX for the screen is for you to design.</p>
 <p>The subsequent steps to retrieve the data are below this permissions section.</p>
 <h3 id="2-cap-initiated-with-two-permissions">2. CAP-initiated with two permissions</h3>
@@ -1412,10 +1412,10 @@ https://registry.core.trust.ib1.org/scheme/perseus/license/energy-consumption-em
 <p><img alt="Separate Permission Flow - EDP Permission UI" src="../../../img/perseus-flow-separate-permissions-2.png" /></p>
 <p>This permission includes permission to fetch and process the SME’s energy consumption data from an EDP and to use it to provide advice to the SME.</p>
 <p>The display of permission text is governed by a Perseus Policy, available in the registry.
-https://registry.core.trust.ib1.org/scheme/perseus/policy/data-license-terms/2026-03-12 </p>
+<a href="https://registry.core.trust.ib1.org/scheme/perseus/policy/data-license-terms/2026-03-12">https://registry.core.trust.ib1.org/scheme/perseus/policy/data-license-terms/2026-03-12 </a></p>
 <p>The permission screen must be displayed before connecting with the Energy Data Provider (EDP). The user must be presented with the Perseus permission text and offered a clear way to agree to it (for example a checkbox). The permission text forms part of the definition of the licence to process the consumption data defined in the Perseus Registry:
-https://registry.core.trust.ib1.org/scheme/perseus/license/energy-consumption-edp-cap/2026-03-12 (see permissionText field) </p>
-<p>The permission text contains placeholders for the names of the EDP and CAP (you). These should be replaced with either the brand.name field (if specified) or the legalName field (always provided) from the Directory information at each organization's ID e.g. https://directory.core.sandbox.trust.ib1.org/m/7a1qv915 is the sandbox EDP name</p>
+<a href="https://registry.core.trust.ib1.org/scheme/perseus/license/energy-consumption-edp-cap/2026-03-12">https://registry.core.trust.ib1.org/scheme/perseus/license/energy-consumption-edp-cap/2026-03-12</a> (see permissionText field) </p>
+<p>The permission text contains placeholders for the names of the EDP and CAP (you). These should be replaced with either the brand.name field (if specified) or the legalName field (always provided) from the Directory information at each organization's ID e.g. <a href="https://directory.core.sandbox.trust.ib1.org/m/7a1qv915">https://directory.core.sandbox.trust.ib1.org/m/7a1qv915</a> is the sandbox EDP name</p>
 <p>Any other UX for the screen is for you to design.</p>
 <p>The subsequent steps to retrieve the data are below this permissions section.</p>
 <h4 id="fsp-offer-ui">FSP Offer UI</h4>
@@ -1425,10 +1425,10 @@ https://registry.core.trust.ib1.org/scheme/perseus/license/energy-consumption-ed
 <p><img alt="Separate Permission Flow - FSP Permission UI" src="../../../img/perseus-flow-separate-permissions-4.png" /></p>
 <p>This permission enables the CAP to provide the SME’s calculated emissions data, based on the consumption data from the EDP, to the named FSP.</p>
 <p>The display of permission text is governed by a Perseus Policy, available in the registry.
-https://registry.core.trust.ib1.org/scheme/perseus/policy/data-license-terms/2026-03-12</p>
+<a href="https://registry.core.trust.ib1.org/scheme/perseus/policy/data-license-terms/2026-03-12">https://registry.core.trust.ib1.org/scheme/perseus/policy/data-license-terms/2026-03-12</a></p>
 <p>The permission screen must be displayed before connecting with the Energy Data Provider (EDP). The user must be presented with the Perseus permission text and offered a clear way to agree to it (for example a checkbox). The permission text forms part of the definition of the licence to process the consumption data defined in the Perseus Registry:
-https://registry.core.trust.ib1.org/scheme/perseus/license/emissions-cap-fsp/2026-03-12 (see permissionText field)</p>
-<p>The permission text contains placeholders for the names of the EDP, CAP (you) and FSP. These should be replaced with either the brand.name field (if specified) or the legalName field (always provided) from the Directory information at each organizations ID e.g. https://directory.core.sandbox.trust.ib1.org/m/7a1qv915 is the sandbox EDP name</p>
+<a href="https://registry.core.trust.ib1.org/scheme/perseus/license/emissions-cap-fsp/2026-03-12">https://registry.core.trust.ib1.org/scheme/perseus/license/emissions-cap-fsp/2026-03-12</a> (see permissionText field)</p>
+<p>The permission text contains placeholders for the names of the EDP, CAP (you) and FSP. These should be replaced with either the brand.name field (if specified) or the legalName field (always provided) from the Directory information at each organizations ID e.g. <a href="https://directory.core.sandbox.trust.ib1.org/m/7a1qv915">https://directory.core.sandbox.trust.ib1.org/m/7a1qv915</a> is the sandbox EDP name</p>
 <p>Any other UX for the screen is for you to design.</p>
 <p>The subsequent steps to retrieve the data are below.</p>
 <h3 id="additional-permission-ui-edp">Additional Permission UI - EDP</h3>
@@ -1457,13 +1457,13 @@ present the client certificate issued to you by the Sandbox Core Trust Framework
 * the mTLS client certificate to identify the client rather than a client_id, and
 * use of response_type=code &amp; swapping the code for refresh and access tokens after authentication.</p>
 <p>The Sandbox provides an implementation of the API, details below, and other Members of the Sandbox may provide EDP implementations you might use which you can discover by querying the Directory’s data service catalog for APIs that conformTo the energy consumption data standard:</p>
-<p>https://directory.core.sandbox.trust.ib1.org/query/data-services?conformsTo=https://registry.core.pilot.trust.ib1.org/scheme/perseus/standard/energy-consumption-data/2024-12-05</p>
+<p><a href="https://directory.core.sandbox.trust.ib1.org/query/data-services?conformsTo=https://registry.core.sandbox.trust.ib1.org/scheme/perseus/standard/energy-consumption-data/2026-03-12">https://directory.core.sandbox.trust.ib1.org/query/data-services?conformsTo=https://registry.core.sandbox.trust.ib1.org/scheme/perseus/standard/energy-consumption-data/2026-03-12</a></p>
 <p><strong>Sandbox EDP</strong>
 Note endpointURL and oauthIssuer URLs</p>
 <pre><code>{
  &quot;title&quot;:&quot;EDP Sandbox synthetic data&quot;,
  &quot;publisher&quot;:&quot;https://members.core.sandbox.trust.ib1.org/m/7a1qv915&quot;,
- &quot;conformsTo&quot;:&quot;https://registry.core.pilot.trust.ib1.org/scheme/perseus/standard/energy-consumption-data/2024-12-05&quot;,
+ &quot;conformsTo&quot;:&quot;https://registry.core.sandbox.trust.ib1.org/scheme/perseus/standard/energy-consumption-data/2026-03-12&quot;,
  &quot;endpointURL&quot;:&quot;https://perseus-demo-energy.ib1.org/consumption/datasources/&quot;,
  &quot;oauthIssuer&quot;:&quot;https://perseus-demo-authentication.ib1.org/&quot;
 }
@@ -1483,7 +1483,7 @@ Note endpointURL and oauthIssuer URLs</p>
 In production, your implementation and UI must take into account that consumption data availability may not be immediate. Delays with SmartDCC and manual processes mean that data may take up to 48 hours to become available. Sandbox data is available immediately unless you specifically configure the environment to return an unavailable response.</p>
 <h2 id="update-and-store-provenance-records-from-edp">Update and store Provenance records from EDP</h2>
 <p><a href="https://specification.trust.ib1.org/provenance-records/1.0/">Provenance Records</a> are a series of “steps” which describe where data came from and how it has been processed. Each participant signs the record with their signing certificate, issued by the Directory. Steps may include assurance metadata, in this case, whether consumption data is from a meter or it has been estimated.</p>
-<p>Because of the signatures, Provenance records are a complex format with JWS signatures and base64 encoded JSON data. A <a href="https://github.com/icebreakerone/provenance">Python reference library</a> is available to generate and update Provenance records, and example code to update the Provenance Records for Perseus is available at https://github.com/icebreakerone/provenance/tree/perseus-scripts/perseus-scripts . This can be used directly in Python applications, or in an external process.</p>
+<p>Because of the signatures, Provenance records are a complex format with JWS signatures and base64 encoded JSON data. A <a href="https://github.com/icebreakerone/provenance">Python reference library</a> is available to generate and update Provenance records, and example code to update the Provenance Records for Perseus is available at <a href="https://github.com/icebreakerone/provenance/tree/perseus-scripts/perseus-scripts">https://github.com/icebreakerone/provenance/tree/perseus-scripts/perseus-scripts</a>. This can be used directly in Python applications, or in an external process.</p>
 <p>The steps added are simple data structures. You will be able to hard code most of the values, and the variable data is easy to obtain identifiers and timestamps.</p>
 <p>Your implementation must manage the Provenance record:</p>
 <p>At the time of retrieving energy consumption data
@@ -1505,35 +1505,35 @@ In production, your implementation and UI must take into account that consumptio
 <h2 id="calculate-emissions">Calculate emissions</h2>
 <h3 id="electricity-emissions-methodology">Electricity emissions methodology</h3>
 <p>The sum of the products of the half-hourly consumption and the corresponding grid intensity at the meter postcode. This is the only calculation permitted by Perseus, defined at 
-https://registry.core.trust.ib1.org/scheme/perseus/process/electricity-emissions-calculation/2026-03-12 </p>
+<a href="https://registry.core.trust.ib1.org/scheme/perseus/process/electricity-emissions-calculation/2026-03-12">https://registry.core.trust.ib1.org/scheme/perseus/process/electricity-emissions-calculation/2026-03-12</a></p>
 <p>Detailed process:</p>
 <ol>
 <li>Retrieve half-hourly electricity consumption from the Energy Data Provider (EDP) in kWh. This may have been recorded directly by a smart meter, or in the case of partial occupancy it may come via a building management system from a sub-meter or a calculation based on number of occupiers or floorspace.</li>
-<li>Pull the corresponding half-hourly grid emissions for the first part of the meter address postcode (the "outcode", which is also provided by the EDP) from carbonintensity.org.uk.  Specifically https://carbon-intensity.github.io/api-definitions/#get-regional-intensity-from-to-postcode-postcode (kgCO2eq/kWh)</li>
+<li>Pull the corresponding half-hourly grid emissions for the first part of the meter address postcode (the "outcode", which is also provided by the EDP) from carbonintensity.org.uk.  Specifically <a href="https://carbon-intensity.github.io/api-definitions/#get-regional-intensity-from-to-postcode-postcode">https://carbon-intensity.github.io/api-definitions/#get-regional-intensity-from-to-postcode-postcode</a> (kgCO2eq/kWh)</li>
 <li>Multiply the half-hourly electricity consumption by the half-hourly grid intensity to get electricity consumption half-hourly emissions (kgCO2eq)</li>
 <li>Produce a report of monthly emissions to an FSP of the SME's choice by summing half-hourly emissions for whole months where data is available. For example if data is available from 2025-05-15 to 2026-03-26, provide monthly data for 2025-06-01 to 2026-02-28. Example report here</li>
 </ol>
 <p>More details on the background to the methodology can be found in <a href="https://ib1.org/wp-content/uploads/2024/12/IB1-PERSEUS-2024-APPENDIX-v2024-12-16.pdf">section 4 of the appendices</a> to the <a href="https://ib1.org/perseus/2024-report/">Perseus 2024 report</a>.</p>
 <h3 id="gas-emissions-methodology">Gas emissions methodology</h3>
 <p>The sum of the products of the half-hourly consumption in cubic meters and the most recent published greenhouse gas conversion factor for natural gas covering the time of consumption. This is the only calculation permitted by Perseus, defined at 
-https://registry.core.trust.ib1.org/scheme/perseus/process/gas-emissions-calculation/2026-03-12</p>
+<a href="https://registry.core.trust.ib1.org/scheme/perseus/process/gas-emissions-calculation/2026-03-12">https://registry.core.trust.ib1.org/scheme/perseus/process/gas-emissions-calculation/2026-03-12</a></p>
 <p>Detailed process:
 1. Retrieve half-hourly gas consumption from the Energy Data Provider (m3). This may have been recorded directly by a smart meter, or in the case of partial occupancy it may come via a building management system from a sub-meter or a calculation based on number of occupiers or floorspace.
 2. Retrieve the most recent Natural Gas emissions intensity figure covering the consumption period from <a href="https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2024">Defra</a> (kgCO2eq / m3). This is updated annually and there is no API for it.
 3. Multiply the half-hourly gas consumption by the gas emissions intensity to get gas consumption half-hourly emissions (kgCO2eq)
-4. Produce a report of monthly emissions to an FSP of the SME's choice for whole months where data is available. For example if data is available from 2025-05-15 to 2026-03-26, provide monthly data for 2025-06-01 to 2026-02-28. Example report including electricity and gas <a href="https://docs.google.com/document/d/1HrUoRWIAh8LD8-SGkdyb59tJ-dTH20mFugsjAIPPEdE/edit?tab=t.0">here</a></p>
+4. Produce a report of monthly emissions to an FSP of the SME's choice for whole months where data is available. For example if data is available from 2025-05-15 to 2026-03-26, provide monthly data for 2025-06-01 to 2026-02-28. Example report including electricity and gas <a href="../../../assets/perseus-example-CAP-SME-carbon-emissions-report-v20251015.pdf">here</a></p>
 <p>There is a <a href="https://ib1.org/wp-content/uploads/2026/02/report_-Perseus-Gas-methodology-and-technical-specification-2025-10-15-shared.pdf">discussion paper</a> covering the gas methodology in the <a href="https://ib1.org/perseus/2025-report/">Perseus 2025 Report accompanying documents</a>.</p>
 <h2 id="generate-report">Generate report</h2>
 <p>The initial report must contain data for the last 12 completed calendar months, if available.</p>
 <p><img alt="Report download UI" src="../../../img/perseus-flow-any-permissions-6.png" /></p>
 <p>Reports must be generated specifically for the FSP chosen by the user (either via the original link from the FSP, or via their second permission. If the user wishes to share with additional FSPs, permission must be obtained in each case.</p>
 <p>The report may be presented as an HTML page or a signed PDF for the user to download. Either is acceptable to demonstrate Perseus-readiness.</p>
-<p>Both reports should display the information provided in the <a href="https://docs.google.com/document/d/1otCH2sy6WI_m3LALjAmHQBr5vmFRQ1Mr7Ug6Z5dO6cM/edit?tab=t.0">Example Perseus Report</a>, summarised as:
+<p>Both reports should display the information provided in the <a href="../../../assets/perseus-example-CAP-SME-carbon-emissions-report-v20251015.pdf">Example Perseus Report</a>, summarised as:
 * Identifying information for your organization (name and ID)
 * Identifying information for the SME (name and ID)
-* Identifying information for the FSP the report is shared
+* Identifying information for the FSP the report is to be shared with
 * Confirmation that the report used the required Perseus method for emissions calculation
-* Monthly and total emissions for the period required (usually the past year)
+* Monthly and total emissions due to gas and/or electricity consumption for the period required (usually the past year)
   * Note that emissions should be reported in complete months only. For example a report generated on 15th July 2025 would run from July 1 2024 to Jun 30 2025 
 * Summary and details of the provenance for the data behind the report</p>
 <h3 id="signed-pdf">Signed PDF</h3>
@@ -1579,7 +1579,7 @@ https://registry.core.trust.ib1.org/scheme/perseus/process/gas-emissions-calcula
 <p>Log all interactions with peers to meet auditing requirements. Data must be retained according to the Perseus <a href="https://registry.core.trust.ib1.org/scheme/perseus/policy/data-retention/2026-03-12">Data Retention Policy</a>.</p>
 <h2 id="implement-server-allowlist">Implement server allowlist</h2>
 <p>To ensure that connections are made only to servers operated by Members of the Trust Framework, the Directory maintains an authoritative allowlist of DNS names. This allowlist is published at a stable, Directory-hosted URL, and must be checked before connecting to an API server.</p>
-<p>https://specification.trust.ib1.org/public-ca-issued-server-tls-certificates-with-directory-allowlist/1.0/#allowlist </p>
+<p><a href="https://specification.trust.ib1.org/public-ca-issued-server-tls-certificates-with-directory-allowlist/1.0/#allowlist">https://specification.trust.ib1.org/public-ca-issued-server-tls-certificates-with-directory-allowlist/1.0/#allowlist</a></p>
 <h2 id="implement-retry-logic-for-consumption-data">Implement retry logic for consumption data</h2>
 <p>While test implementations of EDPs will return data immediately, there will be a delay of up to 48 hours before real EDPs are able to return Smart Meter data. During this time, they will return a <a href="https://registry.core.trust.ib1.org/openapi-viewer/api.html?a=/scheme/perseus/api/consumption-data@2026-03-12.json#/Consumption/getConsumptionData">202 response</a>. </p>
 <p>While you can implement and test logic to retry fetching consumption data in the sandbox, you must implement it for the production environment.</p>
