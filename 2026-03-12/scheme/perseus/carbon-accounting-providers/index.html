@@ -1552,25 +1552,49 @@ In production, your implementation and UI must take into account that consumptio
 <p>Implement <a href="https://specification.trust.ib1.org/withdrawal-of-permission/1.0/">Withdrawal of Permission</a>:</p>
 <p>1) Create a UI to display all the permissions for the logged-in user:</p>
 <ul>
-<li>Permission granted within the CAP</li>
-<li>Permission to process consumption data</li>
-<li>Provide report to FSP (potentially multiple FSPs)</li>
-<li>Permission granted at other members (as OAuth tokens)</li>
-<li>Fetch consumption data from EDPs</li>
+<li>
+<p>Permission granted within the CAP</p>
+</li>
+<li>
+<p>Permission to process consumption data</p>
+</li>
+<li>
+<p>Provide report to FSP (potentially multiple FSPs)</p>
+</li>
+<li>
+<p>Permission granted at other members (as OAuth tokens)</p>
+</li>
+<li>
+<p>Fetch consumption data from EDPs</p>
+</li>
 </ul>
 <p>For permission granted at the CAP, display the logged details as evidence of the grant of permission.</p>
 <p>For permissions granted at other members, use the OAuth token to fetch the <a href="https://specification.docs.ib1.org/permission-records/1.0/">Permission Record</a> and embed the Evidence URL in an iframe.</p>
 <p>2) Implement a <a href="https://specification.trust.ib1.org/message-delivery-to-applications/1.0/">Message Delivery</a> endpoint, and when a withdrawal message is received from the EDP, remove all other permissions and delete unprocessed data.</p>
 <p>3) Implement Withdraw Permission buttons, on each of the permissions, which have slightly different actions:</p>
 <ul>
-<li>Permission to process consumption data</li>
-<li>Send an RFC7009 revocation to all the EDPs</li>
+<li>
+<p>Permission to process consumption data</p>
+</li>
+<li>
+<p>Send an RFC7009 revocation to all the EDPs</p>
+</li>
 <li>Remove all other permissions, including EDP OAuth Tokens and Reporting to FSPs</li>
-<li>Delete raw data received from all EDPs.</li>
-<li>Report to FSP</li>
-<li>Remove this permission only.</li>
-<li>EDP OAuth token (individual EDP)</li>
-<li>Send an RFC7009 revocation to the EDP</li>
+<li>
+<p>Delete raw data received from all EDPs.</p>
+</li>
+<li>
+<p>Report to FSP</p>
+</li>
+<li>
+<p>Remove this permission only.</p>
+</li>
+<li>
+<p>EDP OAuth token (individual EDP)</p>
+</li>
+<li>
+<p>Send an RFC7009 revocation to the EDP</p>
+</li>
 <li>Delete raw data received from this EDP.</li>
 <li>Remove this permission only. (CAP will require it to be reestablished if any further data is needed.)</li>
 </ul>
