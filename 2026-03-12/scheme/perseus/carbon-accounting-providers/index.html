@@ -1528,44 +1528,52 @@ In production, your implementation and UI must take into account that consumptio
 <p><img alt="Report download UI" src="../../../img/perseus-flow-any-permissions-6.png" /></p>
 <p>Reports must be generated specifically for the FSP chosen by the user (either via the original link from the FSP, or via their second permission. If the user wishes to share with additional FSPs, permission must be obtained in each case.</p>
 <p>The report may be presented as an HTML page or a signed PDF for the user to download. Either is acceptable to demonstrate Perseus-readiness.</p>
-<p>Both reports should display the information provided in the <a href="../../../assets/perseus-example-CAP-SME-carbon-emissions-report-v20251015.pdf">Example Perseus Report</a>, summarised as:
-* Identifying information for your organization (name and ID)
-* Identifying information for the SME (name and ID)
-* Identifying information for the FSP the report is to be shared with
-* Confirmation that the report used the required Perseus method for emissions calculation
-* Monthly and total emissions due to gas and/or electricity consumption for the period required (usually the past year)
-  * Note that emissions should be reported in complete months only. For example a report generated on 15th July 2025 would run from July 1 2024 to Jun 30 2025 
-* Summary and details of the provenance for the data behind the report</p>
+<p>Both reports should display the information provided in the <a href="../../../assets/perseus-example-CAP-SME-carbon-emissions-report-v20251015.pdf">Example Perseus Report</a>, summarised as:</p>
+<ul>
+<li>Identifying information for your organization (name and ID)</li>
+<li>Identifying information for the SME (name and ID)</li>
+<li>Identifying information for the FSP the report is to be shared with</li>
+<li>Confirmation that the report used the required Perseus method for emissions calculation</li>
+<li>Monthly and total emissions due to gas and/or electricity consumption for the period required (usually the past year)</li>
+<li>Note that emissions should be reported in complete months only. For example a report generated on 15th July 2025 would run from July 1 2024 to Jun 30 2025 </li>
+<li>Summary and details of the provenance for the data behind the report</li>
+</ul>
 <h3 id="signed-pdf">Signed PDF</h3>
-<p>The PDF should contain:
-* human readable report as normal PDF text.
-* file attachment of the data used to generate the human readable report, in the same format as returned from APIs.
-* file attachment of provenance record,  with a Transfer step using the Bank’s identifier.
-* Perseus logo and “this PDF contains assured data” text.
-* name of recipient bank and instructions for sending it to them
-* PDF digital signature using your Perseus signing certificate</p>
+<p>The PDF should contain:</p>
+<ul>
+<li>human readable report as normal PDF text.</li>
+<li>file attachment of the data used to generate the human readable report, in the same format as returned from APIs.</li>
+<li>file attachment of provenance record,  with a Transfer step using the Bank’s identifier.</li>
+<li>Perseus logo and “this PDF contains assured data” text.</li>
+<li>name of recipient bank and instructions for sending it to them</li>
+<li>PDF digital signature using your Perseus signing certificate</li>
+</ul>
 <h2 id="withdrawal-of-permission">Withdrawal of Permission</h2>
 <p>Implement <a href="https://specification.trust.ib1.org/withdrawal-of-permission/1.0/">Withdrawal of Permission</a>:</p>
-<p>1) Create a UI to display all the permissions for the logged-in user:
-* Permission granted within the CAP
-  * Permission to process consumption data
-  * Provide report to FSP (potentially multiple FSPs)
-* Permission granted at other members (as OAuth tokens)
-  * Fetch consumption data from EDPs</p>
+<p>1) Create a UI to display all the permissions for the logged-in user:</p>
+<ul>
+<li>Permission granted within the CAP</li>
+<li>Permission to process consumption data</li>
+<li>Provide report to FSP (potentially multiple FSPs)</li>
+<li>Permission granted at other members (as OAuth tokens)</li>
+<li>Fetch consumption data from EDPs</li>
+</ul>
 <p>For permission granted at the CAP, display the logged details as evidence of the grant of permission.</p>
 <p>For permissions granted at other members, use the OAuth token to fetch the <a href="https://specification.docs.ib1.org/permission-records/1.0/">Permission Record</a> and embed the Evidence URL in an iframe.</p>
 <p>2) Implement a <a href="https://specification.trust.ib1.org/message-delivery-to-applications/1.0/">Message Delivery</a> endpoint, and when a withdrawal message is received from the EDP, remove all other permissions and delete unprocessed data.</p>
-<p>3) Implement Withdraw Permission buttons, on each of the permissions, which have slightly different actions:
-* Permission to process consumption data
-  * Send an RFC7009 revocation to all the EDPs
-  * Remove all other permissions, including EDP OAuth Tokens and Reporting to FSPs
-  * Delete raw data received from all EDPs.
-* Report to FSP
-  * Remove this permission only.
-* EDP OAuth token (individual EDP)
-  * Send an RFC7009 revocation to the EDP
-  * Delete raw data received from this EDP.
-  * Remove this permission only. (CAP will require it to be reestablished if any further data is needed.)</p>
+<p>3) Implement Withdraw Permission buttons, on each of the permissions, which have slightly different actions:</p>
+<ul>
+<li>Permission to process consumption data</li>
+<li>Send an RFC7009 revocation to all the EDPs</li>
+<li>Remove all other permissions, including EDP OAuth Tokens and Reporting to FSPs</li>
+<li>Delete raw data received from all EDPs.</li>
+<li>Report to FSP</li>
+<li>Remove this permission only.</li>
+<li>EDP OAuth token (individual EDP)</li>
+<li>Send an RFC7009 revocation to the EDP</li>
+<li>Delete raw data received from this EDP.</li>
+<li>Remove this permission only. (CAP will require it to be reestablished if any further data is needed.)</li>
+</ul>
 <p>Withdrawal of permission does not require you to delete any derived data, so if your application has calculated monthly emissions or created other derived data as permitted by the data license, it may retain that derived data.</p>
 <h1 id="beyond-perseus-ready-considerations-for-production">Beyond “Perseus-Ready” - considerations for production</h1>
 <h2 id="allow-user-to-choose-an-edp-where-a-commercial-relationship-isnt-required">Allow user to choose an EDP where a commercial relationship isn’t required</h2>
