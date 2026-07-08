@@ -1552,11 +1552,21 @@ In production, your implementation and UI must take into account that consumptio
 <p>Implement <a href="https://specification.trust.ib1.org/withdrawal-of-permission/1.0/">Withdrawal of Permission</a>:</p>
 <p>1) Create a UI to display all the permissions for the logged-in user:</p>
 <ul>
-<li>Permission granted within the CAP</li>
-<li>Permission to process consumption data</li>
-<li>Provide report to FSP (potentially multiple FSPs)</li>
-<li>Permission granted at other members (as OAuth tokens)</li>
-<li>Fetch consumption data from EDPs</li>
+<li>
+<p>Permission granted within the CAP</p>
+</li>
+<li>
+<p>Permission to process consumption data</p>
+</li>
+<li>
+<p>Provide report to FSP (potentially multiple FSPs)</p>
+</li>
+<li>
+<p>Permission granted at other members (as OAuth tokens)</p>
+</li>
+<li>
+<p>Fetch consumption data from EDPs</p>
+</li>
 </ul>
 <p>For permission granted at the CAP, display the logged details as evidence of the grant of permission.</p>
 <p>For permissions granted at other members, use the OAuth token to fetch the <a href="https://specification.docs.ib1.org/permission-records/1.0/">Permission Record</a> and embed the Evidence URL in an iframe.</p>
