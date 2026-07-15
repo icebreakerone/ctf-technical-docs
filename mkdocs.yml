@@ -7,6 +7,7 @@ nav:
     - 'Perseus':
       - 'Introduction': 'scheme/perseus/index.md'
       - 'Legal and Operational' : 'scheme/perseus/legal-and-operational.md'
+      - 'Common Technical Guide' : 'scheme/perseus/common-technical-guide.md'
       - 'Energy Data Providers' : 'scheme/perseus/energy-data-providers.md'
       - 'Carbon Accounting Providers': 'scheme/perseus/carbon-accounting-providers.md'
       - 'Financial Service Providers' : 'scheme/perseus/financial-service-providers.md'

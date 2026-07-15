@@ -10,6 +10,7 @@ The Sandbox provides identical trust services (Registry and Directory) to Perseu
 ## Contents
 
 * [Legal and operational guide](legal-and-operational.md)
-* [Information for Energy Data Providers](energy-data-providers.md)
-* [Information for Carbon Accounting Providers](carbon-accounting-providers.md)
-* [Information for Financial Service Providers](financial-service-providers.md)
+* [Common technical guide for all roles](common-technical-guide.md)
+* [Technical guide for Energy Data Providers](energy-data-providers.md)
+* [Technical guide for Carbon Accounting Providers](carbon-accounting-providers.md)
+* [Technical guide for Financial Service Providers](financial-service-providers.md)
