@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#carbon-accounting-platforms" class="md-skip">
+        <a href="#carbon-accounting-platforms-caps" class="md-skip">
           Skip to content
         </a>
       
@@ -426,6 +426,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../common-technical-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Common Technical Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../energy-data-providers/" class="md-nav__link">
         
   
@@ -514,43 +542,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#architecture-overview" class="md-nav__link">
+  <a href="#first-steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Architecture overview
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#demo-web-applications" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Demo web applications
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#generate-certificates" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Generate certificates
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#identifiers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Identifiers
+        First steps
       
     </span>
   </a>
@@ -974,43 +969,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#architecture-overview" class="md-nav__link">
+  <a href="#first-steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Architecture overview
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#demo-web-applications" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Demo web applications
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#generate-certificates" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Generate certificates
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#identifiers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Identifiers
+        First steps
       
     </span>
   </a>
@@ -1348,39 +1310,15 @@
   
 
 
-<h1 id="carbon-accounting-platforms">Carbon Accounting Platforms</h1>
-<h2 id="architecture-overview">Architecture overview</h2>
-<p><img alt="Perseus Architecture" src="../../../img/perseus-technical-architecture-v2025-09-16.png" /></p>
-<h2 id="demo-web-applications">Demo web applications</h2>
-<p>Icebreaker One has published demonstration energy data provider (EDP) and carbon accounting provider (CAP) implementations in Python. Our intention is for the code and README there to be self-describing. Please use the GitHub Issues feature on the repository if you have any questions or encounter problems.</p>
-<p><a href="https://github.com/icebreakerone/perseus-demo-energy">https://github.com/icebreakerone/perseus-demo-energy</a>
-<a href="https://github.com/icebreakerone/perseus-demo-cap">https://github.com/icebreakerone/perseus-demo-cap</a></p>
-<h2 id="generate-certificates">Generate certificates</h2>
-<p>When your organization completes the Core Trust Framework agreement (see <a href="../legal-and-operational/">Legal</a>) IB1 will create an organization record in the Sandbox and Production member portals, and invite your administrative contacts to create user accounts on them.</p>
-<p>IB1 or your own organisation administrator will send an invitation to create an account on the <strong>Sandbox</strong> member portal at <a href="https://member.core.sandbox.trust.ib1.org">https://member.core.sandbox.trust.ib1.org</a></p>
-<p>You will need to set a password and provide a 2nd method of authentication via text message or authenticator application.</p>
-<p>Once configured, log into the member portal and navigate to the Perseus scheme.</p>
-<p>If you have not already done so, create a new Application within the Perseus scheme.</p>
-<p>You may choose the application name, but ensure it is clear and recognisable to external audiences, as it will appear publicly in the Directory and on issued certificates.</p>
-<p><img alt="Member Portal - Create Application" src="../../../img/perseus-directory-create-app.png" /></p>
-<p>Create a <strong>Client certificate</strong> and a <strong>Signing certificate</strong>. For each, follow the instructions in the Directory to create a CSR with openssl and upload it for signing to the Directory.</p>
-<p><img alt="Member Portal - Create certificate step 1" src="../../../img/perseus-directory-cert-1.png" />
-<img alt="Member Portal - Create certificate step 2" src="../../../img/perseus-directory-cert-2.png" /></p>
-<p>Use a separate private key for each certificate, and store them securely.</p>
-<p>Detailed documentation of Perseus certificates may be found in the<a href="https://specification.docs.ib1.org/member-identity-digital-certificates/1.0/">Member Identity Digital Certificates</a> specification.</p>
-<h2 id="identifiers">Identifiers</h2>
-<p>The Trust Framework uses Registry URLs as identifiers to discover APIs and other Members in the Directory. These URLs will vary between environments, both the hostname in the URL and any version number in the URL path.</p>
-<p><strong>Sandbox</strong></p>
+<h1 id="carbon-accounting-platforms-caps">Carbon Accounting Platforms (CAPs)</h1>
+<h2 id="first-steps">First steps</h2>
+<p>Refer to the <a href="../common-technical-guide/">Common Technical Guide</a> for:</p>
 <ul>
-<li>Registry hostname: <code>https://registry.core.sandbox.trust.ib1.org</code></li>
-<li>Directory hostname: <code>https://directory.core.sandbox.trust.ib1.org</code></li>
+<li>an architectural overview of Perseus</li>
+<li>links to demo applications</li>
+<li>instructions for registering for the Core Trust Framework sandbox member portal </li>
+<li>how to configure your application and issue it digital certificates</li>
 </ul>
-<p><strong>Production</strong></p>
-<ul>
-<li>Registry hostname: <code>https://registry.core.trust.ib1.org</code></li>
-<li>Directory hostname: <code>https://directory.core.trust.ib1.org</code></li>
-</ul>
-<p>You should write your application with a configuration that allows the entire URL to be varied between environments.</p>
 <h2 id="permission-flow">Permission flow</h2>
 <p>Sequence diagrams for the user permission flows and technical details of the FAPI2 OAuth2 flow are available at </p>
 <p><a href="https://github.com/icebreakerone/perseus-sequence-diagrams">https://github.com/icebreakerone/perseus-sequence-diagrams</a></p>

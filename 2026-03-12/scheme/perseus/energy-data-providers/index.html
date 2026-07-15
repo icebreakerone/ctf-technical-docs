@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://docs.core.trust.ib1.org/2026-03-12/scheme/perseus/energy-data-providers/">
       
       
-        <link rel="prev" href="../legal-and-operational/">
+        <link rel="prev" href="../common-technical-guide/">
       
       
         <link rel="next" href="../carbon-accounting-providers/">
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#energy-data-providers" class="md-skip">
+        <a href="#energy-data-providers-edps" class="md-skip">
           Skip to content
         </a>
       
@@ -423,6 +423,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../common-technical-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Common Technical Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -434,6 +462,24 @@
       
         
       
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Energy Data Providers
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -451,6 +497,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#first-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permission-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permission flow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-api-endpoint-for-perseus-and-fapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure API endpoint for Perseus and FAPI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oauth-issuer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OAuth issuer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-provenance-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generate Provenance records
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implement-consumption-data-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implement consumption data API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#withdrawal-of-permission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Withdrawal of Permission
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -575,6 +717,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#first-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permission-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permission flow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-api-endpoint-for-perseus-and-fapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure API endpoint for Perseus and FAPI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oauth-issuer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OAuth issuer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-provenance-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generate Provenance records
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implement-consumption-data-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implement consumption data API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#withdrawal-of-permission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Withdrawal of Permission
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -593,8 +820,147 @@
   
 
 
-<h1 id="energy-data-providers">Energy Data Providers</h1>
-<p><strong>Coming soon</strong></p>
+<h1 id="energy-data-providers-edps">Energy Data Providers (EDPs)</h1>
+<h2 id="first-steps">First steps</h2>
+<p>Refer to the <a href="../common-technical-guide/">Common Technical Guide</a> for:</p>
+<ul>
+<li>an architectural overview of Perseus</li>
+<li>links to demo applications</li>
+<li>instructions for registering for the Core Trust Framework sandbox member portal </li>
+<li>how to configure your application and issue it digital certificates</li>
+</ul>
+<h2 id="permission-flow">Permission flow</h2>
+<p>Sequence diagrams for the user permission flows and technical details of the FAPI2 OAuth2 flow are available at </p>
+<p><a href="https://github.com/icebreakerone/perseus-sequence-diagrams">https://github.com/icebreakerone/perseus-sequence-diagrams</a></p>
+<h2 id="configure-api-endpoint-for-perseus-and-fapi">Configure API endpoint for Perseus and FAPI</h2>
+<p>Your API endpoint must follow the FAPI specification and follow the specifications for  certificates.</p>
+<ul>
+<li>Configure web service cryptography to meet the <a href="https://specification.docs.ib1.org/baseline-tls-configuration/1.0/">Baseline TLS Configuration</a></li>
+<li>Install a non-wildcard server certificate issued by a well-trusted public CA.</li>
+<li>Client Certificates<ul>
+<li>Verify the connecting client using the Sandbox Core TF root client CA certificate. This will be provided by IB1.</li>
+<li>Check the role for the client application encoded in its certificate is <code>https://registry.core.sandbox.trust.ib1.org/scheme/perseus/role/carbon-accounting-provider</code>. Return 403 if it is not.<ul>
+<li>This URL should be configurable depending on the deployment environment because it will be different in production</li>
+<li>See <a href="https://specification.trust.ib1.org/member-identity-digital-certificates/1.0/#verifying-a-client-certificate">Member Identity Digital Certificates - Verifying a Client Certificate</a></li>
+</ul>
+</li>
+<li>Python helper library: https://pypi.org/project/ib1-directory/ </li>
+</ul>
+</li>
+</ul>
+<h2 id="oauth-issuer">OAuth issuer</h2>
+<p>Implement the issuer side of the <a href="https://specification.docs.ib1.org/oauth-with-member-identity-certificates/1.0/.">OAuth with Member Identity Certificates</a> flow.</p>
+<p>The key points of the OAuth flow are the use of RFC9126 Pushed Authorization Request (PAR), the mTLS client certificate to identify the client rather than a <code>client_id</code>, and use of <code>response_type=code</code> &amp; swapping the code for refresh and access tokens after authentication.</p>
+<p>Perseus adds the following requirements to the underlying <a href="https://specification.docs.ib1.org/oauth-with-member-identity-certificates/1.0/.">OAuth with Member Identity Certificates</a> specification:</p>
+<ul>
+<li>Verify the client certificate as described in <a href="#configure-api-endpoint-for-perseus-and-fapi">Configure API endpoint for Perseus and FAPI</a></li>
+<li>When the client submits a PAR, they are asserting that they have the necessary permission from the account holder to use the data within Perseus and send a derived report to a Financial Service Provider. Log this request in sufficient detail to satisfy an audit.</li>
+<li>The “authentication” step in your OAuth flow should request the details needed to identify the meter, as a one shot process. You should not ask the user to create an account or ask for contact details unless strictly required to identify the meter or meet regulatory requirements – errors discovered after the information has been submitted will be handled manually.</li>
+</ul>
+<h2 id="generate-provenance-records">Generate Provenance records</h2>
+<p><a href="https://specification.trust.ib1.org/provenance-records/1.0/">Provenance</a> Records are a series of “steps” which describe where data came from and how it has been processed. Each participant signs the record with their signing certificate, issued by the Directory. Steps may include assurance metadata, in this case, whether consumption data is from a meter or it has been estimated.</p>
+<p>Because of the signatures, Provenance records are a complex format with JWS signatures and base64 encoded JSON data. A Python reference library is available to generate and update Provenance records, and example code to update the Provenance Records for Perseus is available at <a href="https://github.com/icebreakerone/provenance/tree/perseus-scripts/perseus-scripts">https://github.com/icebreakerone/provenance/tree/perseus-scripts/perseus-scripts</a>. This can be used directly in Python applications, or in an external process.</p>
+<p>Your implementation must create a new Provenance record when serving consumption data to a CAP:</p>
+<ul>
+<li>Create a “Permission” step to record the permission from the user</li>
+</ul>
+<pre><code class="language-json">{
+    &quot;type&quot;: &quot;permission&quot;,
+    &quot;scheme&quot;: &quot;https://registry.core.sandbox.trust.ib1.org/scheme/perseus&quot;,
+    &quot;timestamp&quot;:  &quot;2025-09-01-T12:34:56Z&quot;,
+    &quot;account&quot;: id_of_permission_step,
+    &quot;allows&quot;: {
+        &quot;licenses&quot;: [
+            &quot;https://smartenergycodecompany.co.uk/documents/sec/consolidated-sec/&quot;,
+       &quot;https://registry.core.sandbox.trust.ib1.org/scheme/perseus/licence/energy-consumption-data/2024-12-05&quot;
+        ]
+    },
+    &quot;expires&quot;: &quot;2026-09-01T12:34:56Z&quot;
+}
+</code></pre>
+<ul>
+<li>Create an “Origin” step for the data retrieved from SmartDCC</li>
+</ul>
+<pre><code class="language-json">
+{           
+    &quot;type&quot;: &quot;origin&quot;,
+    &quot;scheme&quot;: &quot;https://registry.core.sandbox.trust.ib1.org/scheme/perseus&quot;,
+    &quot;sourceType&quot;: &quot;https://registry.core.sandbox.trust.ib1.org/scheme/perseus/source-type/Meter&quot;,
+    &quot;origin&quot;: &quot;https://www.smartdcc.co.uk/&quot;,
+    &quot;originLicence&quot;: &quot;https://smartenergycodecompany.co.uk/documents/sec/consolidated-sec/&quot;,
+    &quot;external&quot;: true,
+    &quot;permissions&quot;: id_of_permission_step,
+    &quot;perseus:scheme&quot;: {
+         &quot;meteringPeriod&quot;: {
+            &quot;from&quot;: &quot;2024-09–01T00:00:00&quot;,
+            &quot;to&quot;: &quot;2025-09–01T00:00:00&quot;
+        }
+    },
+    &quot;perseus:assurance&quot;: {
+        &quot;missingData&quot;: &quot;https://registry.core.sandbox.trust.ib1.org/scheme/perseus/assurance/missing-data/Complete&quot;,
+         &quot;originMethod&quot;: &quot;https://registry.core.sandbox.trust.ib1.org/scheme/perseus/assurance/origin-method/SmartDCCOtherUser&quot;
+  },
+}
+</code></pre>
+<ul>
+<li>Create a “Transfer” step with the ID of the client</li>
+</ul>
+<pre><code class="language-json">{
+    &quot;type&quot;: &quot;transfer&quot;,
+    &quot;scheme&quot;: &quot;https://registry.core.sandbox.trust.ib1.org/scheme/perseus&quot;,
+    &quot;of&quot;: id_of_origin_step,
+    &quot;to&quot;: url_of_client_in_directory,
+    &quot;standard&quot;: &quot;https://registry.core.sandbox.trust.ib1.org/scheme/perseus/standard/energy-consumption-data/2024-12-05&quot;,
+    &quot;license&quot;: &quot;https://registry.core.sandbox.trust.ib1.org/scheme/perseus/licence/energy-consumption-data/2024-12-05&quot;,
+    &quot;service&quot;: &quot;https://dev.example.com/perseus-api/1.0&quot;,
+    &quot;path&quot;: &quot;/readings&quot;,
+    &quot;parameters&quot;: {
+        &quot;measure&quot;: &quot;import&quot;,
+        &quot;from&quot;: &quot;2024-09–01T00:00:00&quot;,
+        &quot;to&quot;: &quot;2025-09–01T00:00:00&quot;
+    },
+    &quot;permissions&quot;: id_of_permission_from_cap,
+    &quot;transaction&quot;: fapi_transaction_id
+}
+</code></pre>
+<ul>
+<li>Sign the complete record.</li>
+</ul>
+<p>The steps added are simple data structures. You will be able to hard code most of the values, and the variable data is easy to obtain identifiers and timestamps.</p>
+<p>The URLs will vary across environments. License and standard URLs need to be configurable in their entirety. Other identifiers vary by the hostname only, so you only need to include the Registry hostname in your configuration.</p>
+<h2 id="implement-consumption-data-api">Implement consumption data API</h2>
+<p>Implement the <a href="https://registry.core.sandbox.trust.ib1.org/scheme/perseus/standard/energy-consumption-data/2026-03-12">Energy Consumption Data API</a> (<a href="https://registry.core.sandbox.trust.ib1.org/scheme/perseus/api/consumption-data@2026-03-12.json#ed6faea19fe0b57ff60fb6eaf3d4ba626069aef1af59eeaf2bcd0b344c23a7af">Open API specification</a>), authenticated using the OAuth token. </p>
+<p>An OpenAPI viewer of the consumption API is available on the Registry
+<a href="https://registry.core.sandbox.trust.ib1.org/openapi-viewer/api.html?a=/scheme/perseus/api/consumption-data@2026-03-12.json">https://registry.core.sandbox.trust.ib1.org/openapi-viewer/api.html?a=/scheme/perseus/api/consumption-data@2026-03-12.json</a></p>
+<p>The response must include a signed Provenance record, generated as above.</p>
+<p><strong>For the Perseus sandbox, this API must only return synthetic data.</strong></p>
+<h2 id="withdrawal-of-permission">Withdrawal of Permission</h2>
+<p>Implement <a href="https://specification.trust.ib1.org/withdrawal-of-permission/1.0/">Withdrawal of Permission</a>:</p>
+<ol>
+<li>Implement an RFC7009 token revocation endpoint for your OAuth Issuer. When the CAP uses this endpoint, your implementation must immediately invalidate the token and delete any stored data.</li>
+<li>If your implementation includes user registration/account creation (for example, if you provide alternative metering), you must implement a UI to list and withdraw Permissions for logged in users. When a user withdraws permission, invalidate the OAuth tokens, and send a withdrawal message to the CAP’s <a href="https://specification.trust.ib1.org/message-delivery-to-applications/1.0/">Message Delivery</a> endpoint.</li>
+</ol>
+<h1 id="beyond-perseus-ready-considerations-for-production">Beyond “Perseus-Ready” - considerations for production</h1>
+<h2 id="implement-transaction-logging">Implement transaction logging</h2>
+<p>Log all interactions with peers to meet auditing requirements.</p>
+<h2 id="implement-retry-logic-for-consumption-data">Implement retry logic for consumption data</h2>
+<p>In cases where there is a delay in the consumption data being available (for example due to data retrieval via SmartDCC), the consumption API must return a <a href="https://registry.core.pilot.trust.ib1.org/openapi-viewer/api.html?a=/scheme/perseus/api/consumption-data@2024-12-05.json#/Consumption/getConsumptionData">202 response</a>. CAPs will implement retry logic to repeat the request.</p>
+<p>While you can implement and test logic to retry fetching consumption data in the sandbox, you must implement it for the production environment.</p>
+<h2 id="ensure-your-production-app-uses-production-registry-urls">Ensure your production app uses production Registry URLs</h2>
+<p>The production registry will be published at <code>https://registry.core.trust.ib1.org/scheme/perseus</code></p>
+<p>The URLs to check are:</p>
+<ul>
+<li>Role URLs used to validate CAP client connections</li>
+<li>licence, standard and scheme identifiers in provenance records</li>
+</ul>
+<h2 id="move-to-production-environment">Move to Production environment</h2>
+<p>To deploy your application in production:</p>
+<ul>
+<li>Wait for your Member record to be created in the Production Directory, after signing the Perseus Agreement.</li>
+<li>Create your Application in the Directory.</li>
+<li>Create Production Client and Signing Certificates.</li>
+<li>Configure deployment with Production Identifiers &amp; Certificates</li>
+</ul>
 
 
 
