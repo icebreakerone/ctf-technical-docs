@@ -37,10 +37,13 @@ Detailed documentation of Perseus certificates may be found in the[Member Identi
 ## Identifiers
 The Trust Framework uses Registry URLs as identifiers to discover APIs and other Members in the Directory. These URLs will vary between environments, both the hostname in the URL and any version number in the URL path.
 
-Sandbox
+**Sandbox**
+
 * Registry hostname: `https://registry.core.sandbox.trust.ib1.org`
 * Directory hostname: `https://directory.core.sandbox.trust.ib1.org`
-Production
+
+**Production**
+
 * Registry hostname: `https://registry.core.trust.ib1.org`
 * Directory hostname: `https://directory.core.trust.ib1.org`
 
@@ -281,7 +284,7 @@ Detailed process:
 1. Retrieve half-hourly gas consumption from the Energy Data Provider (m3). This may have been recorded directly by a smart meter, or in the case of partial occupancy it may come via a building management system from a sub-meter or a calculation based on number of occupiers or floorspace.
 2. Retrieve the most recent Natural Gas emissions intensity figure covering the consumption period from [Defra](https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2024) (kgCO2eq / m3). This is updated annually and there is no API for it.
 3. Multiply the half-hourly gas consumption by the gas emissions intensity to get gas consumption half-hourly emissions (kgCO2eq)
-4. Produce a report of monthly emissions to an FSP of the SME's choice for whole months where data is available. For example if data is available from 2025-05-15 to 2026-03-26, provide monthly data for 2025-06-01 to 2026-02-28. Example report including electricity and gas [here](../../assets/perseus-example-CAP-SME-carbon-emissions-report-v20251015.pdf)
+4. Produce a report of monthly emissions to an FSP of the SME's choice for whole months where data is available. For example if data is available from 2025-05-15 to 2026-03-26, provide monthly data for 2025-06-01 to 2026-02-28. Example report including electricity and gas [here](../../assets/perseus-example-CAP-SME-carbon-emissions-report-v20260312.pdf)
 
 There is a [discussion paper](https://ib1.org/wp-content/uploads/2026/02/report_-Perseus-Gas-methodology-and-technical-specification-2025-10-15-shared.pdf) covering the gas methodology in the [Perseus 2025 Report accompanying documents](https://ib1.org/perseus/2025-report/).
 
@@ -295,7 +298,7 @@ Reports must be generated specifically for the FSP chosen by the user (either vi
 
 The report may be presented as an HTML page or a signed PDF for the user to download. Either is acceptable to demonstrate Perseus-readiness.
 
-Both reports should display the information provided in the [Example Perseus Report](../../assets/perseus-example-CAP-SME-carbon-emissions-report-v20251015.pdf), summarised as:
+Both reports should display the information provided in the [Example Perseus Report](../../assets/perseus-example-CAP-SME-carbon-emissions-report-v20260312.pdf), summarised as:
 
 * Identifying information for your organization (name and ID)
 * Identifying information for the SME (name and ID)
