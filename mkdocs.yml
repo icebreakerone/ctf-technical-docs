@@ -1,0 +1,54 @@
+site_name: Core Trust Framework Documentation
+site_url: https://docs.core.trust.ib1.org
+repo_url: https://github.com/icebreakerone/crf-technical-docs
+nav:
+  - 'Introduction': 'index.md'
+  - 'Schemes':
+    - 'Perseus':
+      - 'Introduction': 'scheme/perseus/index.md'
+      - 'Legal and Operational' : 'scheme/perseus/legal-and-operational.md'
+      - 'Energy Data Providers' : 'scheme/perseus/energy-data-providers.md'
+      - 'Carbon Accounting Providers': 'scheme/perseus/carbon-accounting-providers.md'
+      - 'Financial Service Providers' : 'scheme/perseus/financial-service-providers.md'
+  - 'Changelog': 'changelog.md'
+theme:
+  name: material
+  navigation_depth: 3
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  custom_dir: overrides
+  font:
+    text: Open Sans
+  palette:
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: ib1-light
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: ib1-dark
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+extra:
+  version:
+    provider: mike
+extra_css:
+  - stylesheets/extra.css
+markdown_extensions:
+  - markdown_grid_tables
+  - tables
+  - attr_list
+  - def_list
+plugins:
+  - social:
+      cards_layout_options:
+        background_color: "#0D1C22" 
+        color: "#FFFFFF"
+  - mike:
+      alias_type: redirect
+      redirect_template: "./mike/redirect.html"
