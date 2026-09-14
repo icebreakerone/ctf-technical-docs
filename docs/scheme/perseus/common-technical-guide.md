@@ -12,7 +12,7 @@ Icebreaker One has published demonstration energy data provider (EDP) and carbon
 
 ## Generate certificates
 
-When your organization completes the Core Trust Framework agreement (see [Legal](legal-and-operational.md)) IB1 will create an organization record in the Sandbox and Production member portals, and invite your administrative contacts to create user accounts on them.
+When your organization completes the Core Trust Framework agreement (see [Legal](legal-and-operational.md)) IB1 will review the information provided and create an organization record in the Sandbox and Production member portals within two working days, then invite your administrative contacts to create user accounts on them.
 
 IB1 or your own organisation administrator will send an invitation to create an account on the **Sandbox** member portal at [https://member.core.sandbox.trust.ib1.org](https://member.core.sandbox.trust.ib1.org)
 

@@ -183,7 +183,8 @@ This UI is presented by the EDP as part of the OAuth flow
 ![Consumption data fetch UI](../../img/perseus-flow-any-permissions-5.png)
 
 Implement API clients to fetch the raw data:
-* Consumption data API](https://registry.core.trust.ib1.org/scheme/perseus/standard/energy-consumption-data/2026-03-12), using the OAuth token. The response includes the meter’s postcode outcode (first half of the postcode).
+
+* [Consumption data API](https://registry.core.trust.ib1.org/scheme/perseus/standard/energy-consumption-data/2026-03-12), using the OAuth token. The response includes the meter’s postcode outcode (first half of the postcode).
 * Use NESO’s [grid intensity API](https://carbon-intensity.github.io/api-definitions/#get-regional-intensity-from-to-postcode-postcode) to retrieve emissions data using the postcode outcode.
 
 **Note**
