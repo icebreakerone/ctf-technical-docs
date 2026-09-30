@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1418,9 +1418,11 @@ Note endpointURL and oauthIssuer URLs</p>
 <p><img alt="EDP identity confirmation" src="../../../img/perseus-flow-any-permissions-4.png" /></p>
 <h3 id="consumption-data-fetch">Consumption data fetch</h3>
 <p><img alt="Consumption data fetch UI" src="../../../img/perseus-flow-any-permissions-5.png" /></p>
-<p>Implement API clients to fetch the raw data:
-* Consumption data API](https://registry.core.trust.ib1.org/scheme/perseus/standard/energy-consumption-data/2026-03-12), using the OAuth token. The response includes the meter’s postcode outcode (first half of the postcode).
-* Use NESO’s <a href="https://carbon-intensity.github.io/api-definitions/#get-regional-intensity-from-to-postcode-postcode">grid intensity API</a> to retrieve emissions data using the postcode outcode.</p>
+<p>Implement API clients to fetch the raw data:</p>
+<ul>
+<li><a href="https://registry.core.trust.ib1.org/scheme/perseus/standard/energy-consumption-data/2026-03-12">Consumption data API</a>, using the OAuth token. The response includes the meter’s postcode outcode (first half of the postcode).</li>
+<li>Use NESO’s <a href="https://carbon-intensity.github.io/api-definitions/#get-regional-intensity-from-to-postcode-postcode">grid intensity API</a> to retrieve emissions data using the postcode outcode.</li>
+</ul>
 <p><strong>Note</strong>
 In production, your implementation and UI must take into account that consumption data availability may not be immediate. Delays with SmartDCC and manual processes mean that data may take up to 48 hours to become available. Sandbox data is available immediately unless you specifically configure the environment to return an unavailable response.</p>
 <h2 id="update-and-store-provenance-records-from-edp">Update and store Provenance records from EDP</h2>
@@ -1608,7 +1610,7 @@ In production, your implementation and UI must take into account that consumptio
     
     
   
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
 
