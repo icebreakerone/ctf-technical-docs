@@ -35,6 +35,13 @@ Use a separate private key for each certificate, and store them securely.
 
 Detailed documentation of Perseus certificates may be found in the[Member Identity Digital Certificates](https://specification.docs.ib1.org/member-identity-digital-certificates/1.0/) specification.
 
+### Checking certificates
+
+The Core Trust Framework Directory provides a tool to check the validity and view the content of client and signing certificates. To confirm participant information you must use the Directory for the environment the certificate is issued from (Sandbox or Production). The viewer may be found at:
+
+* Sandbox: [https://directory.core.sandbox.trust.ib1.org/tools/certificate-viewer/](https://directory.core.sandbox.trust.ib1.org/tools/certificate-viewer/)
+* Production: [https://directory.core.trust.ib1.org/tools/certificate-viewer/](https://directory.core.trust.ib1.org/tools/certificate-viewer/)
+
 ## Identifiers
 The Trust Framework uses Registry URLs as identifiers to discover APIs and other Members in the Directory. These URLs will vary between environments, both the hostname in the URL and any version number in the URL path.
 
