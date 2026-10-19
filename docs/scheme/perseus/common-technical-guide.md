@@ -42,6 +42,32 @@ The Core Trust Framework Directory provides a tool to check the validity and vie
 * Sandbox: [https://directory.core.sandbox.trust.ib1.org/tools/certificate-viewer/](https://directory.core.sandbox.trust.ib1.org/tools/certificate-viewer/)
 * Production: [https://directory.core.trust.ib1.org/tools/certificate-viewer/](https://directory.core.trust.ib1.org/tools/certificate-viewer/)
 
+### Intermediate renewal
+
+The Directory issues member certificates from intermediate CA certificates, one for client certificates and one for signing certificates. The intermediates are replaced every year. The root CA certificates do not change.
+
+Each intermediate issues certificates for one year, then stays valid for a further year without issuing. This means a certificate issued on an intermediate's last issuing day is still valid for its full term. While a new intermediate is issuing, the previous one is still valid, so there are two valid intermediates of each type at any time.
+
+IB1 will notify members before a new intermediate starts issuing. The new intermediates can be downloaded from the **CA certificates** page of the member portal for each environment.
+
+**Existing certificates**
+
+Certificates issued by the previous intermediate stay valid until their own expiry date. You do not need to reissue them.
+
+**Client certificates (mTLS)**
+
+* If you accept mTLS connections, for example as an energy data provider, add the new client intermediate to your trust store before it starts issuing. Keep the previous intermediate in your trust store until it expires, as members will still present certificates it issued.
+* When you renew your client certificate, it will be issued by the new intermediate. Configure your client to present your certificate together with the intermediate that issued it.
+
+**Signing certificates (provenance)**
+
+* When you renew your signing certificate, it will be issued by the new intermediate. Sign provenance records with your certificate followed by its new intermediate, so the record carries the full chain.
+* If you verify provenance records, verify against the signing root CA certificate. Records include the intermediate that issued each signer's certificate, so no change is needed when intermediates are renewed.
+
+**After the previous intermediate expires**
+
+Every certificate the previous intermediate issued will have expired by then, so you can remove it from your trust stores.
+
 ## Identifiers
 The Trust Framework uses Registry URLs as identifiers to discover APIs and other Members in the Directory. These URLs will vary between environments, both the hostname in the URL and any version number in the URL path.
 
