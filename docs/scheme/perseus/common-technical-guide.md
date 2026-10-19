@@ -53,6 +53,12 @@ IB1 will notify members before a new intermediate starts issuing. The new interm
 
 - the **CA certificates** page of the member portal for an environment
 - Without logging in: `/ca/client` and `/ca/signing` of the Directory for an environment
+  - Production
+    - https://directory.core.trust.ib1.org/ca/client
+    - https://directory.core.trust.ib1.org/ca/signing
+  - Sandbox
+    - https://directory.core.sandbox.trust.ib1.org/ca/client
+    - https://directory.core.sandbox.trust.ib1.org/ca/signing
 - With the Directory CLI: `directory ca download client` and `directory ca download signing`
 
 **Existing certificates**
